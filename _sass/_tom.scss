@@ -1,0 +1,73 @@
+/**
+ * Tom Rules
+ */
+.post-list {
+    > li {
+        margin-bottom: calc(#{$spacing-unit} / 2);
+    }
+    a.category{
+        display:inline-block;
+        text-decoration: underline;
+        &::before{
+            content: "[";
+        }
+        &::after{
+            content: "]";
+        }
+    }
+}
+
+.home,
+.post,
+.post-list-nav{
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.post-list-nav{
+    a {
+        display: block;
+        margin: .5rem;
+        &:first-of-type{
+            margin-bottom:1rem;
+        }
+        &.button{
+            padding: .5rem;
+            background-color: yellow;
+            border: .125rem solid black;
+            border-radius: .5rem;
+            text-align: center;
+            text-decoration: none;
+            &:hover{
+                background-color:orange;
+            }
+            &:focus{
+                background-color:magenta;
+            }
+        }
+    position: relative;
+    left: -2.5rem;
+    }
+}
+
+.page-heading,
+.rss-subscribe{
+    display: inline-block;
+}
+
+.rss-subscribe{
+    margin: 0 0 0 1rem;
+}
+
+.post{
+    width:80%;
+}
+
+.hide{
+    display: none;
+}
+
+.selected{
+    color: magenta;
+}

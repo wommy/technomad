@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <p class="rss-subscribe">- subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        {% for category in post.categories %}
+          <a class="category {{ category }}" href="#{{ category }}">{{ category }}</a>
+        {% endfor %}
+        - <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+
+  {% comment %}
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%Y %m %d" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        {{ post.content }}
+      </li>
+    {% endfor %}
+
+    <!-- http://stackoverflow.com/questions/26196559/jekyll-post-order > http://stackoverflow.com/questions/19086284/jekyll-liquid-templating-how-to-group-blog-posts-by-year/20777475#20777475
+    {% for post in site.posts %}
+      {% assign currentdate = post.date | date: "%Y %m %d" %}
+      {% if currentdate != date %}
+        {% unless forloop.first %}</ul>{% endunless %}
+        <h1 id="y{{post.date | date: '%Y %m %d'}}">{{ currentdate }}</h1>
+        <ul>
+        {% assign date = currentdate %}
+      {% endif %}
+        <li>[<a href="#{{ post.categories }}">{{ post.categories }}</a>] <a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% if forloop.last %}</ul>{% endif %}
+    {% endfor %}
+  {% endcomment %}
+
+  </ul>
+{% comment %}
+  <ul>
+    {% for category in site.categories %}
+      <li>{{category | first}}</li>
+    {% endfor %}
+  </ul>
+{% endcomment %}
+</div>

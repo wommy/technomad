@@ -1,0 +1,33 @@
+
+
+<!-- category -->
+<nav class="post-list-nav">
+  <a onclick="caTog()" class="button" href="{{ site.baseurl }}/#">ALL POSTS</a>
+  {% for category in site.categories %}
+    <a onclick="caTog( '{{category | first}}' )" class="button" href="{{ site.baseurl }}/#{{ category | first }}">{{ category | first }}</a>
+  {% endfor %}
+
+    {% comment %}
+
+<nav class="post-list-nav">
+  <a onclick="categoryToggle()" class="button" href="{{ site.baseurl }}/#">ALL POSTS</a>
+  {% for category in site.categories %}
+    <a onclick="categoryToggle('{{ category | first }}')" class="button" href="{{ site.baseurl }}/#{{ category | first }}">{{ category | first }}</a>
+  {% endfor %}
+
+
+
+      <!-- http://stackoverflow.com/questions/20872861/jekyll-display-posts-by-category -->
+
+      <nav>
+      {% for posts in category %}
+        {% for post in posts %}
+          {% if post.url %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      </nav>
+    {% endcomment %}
+
+</nav>

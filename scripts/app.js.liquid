@@ -1,0 +1,218 @@
+---
+
+---
+
+function noDiscriminate( obj ) {
+    var r = obj;
+    if (confirm("By continuing, you agree to not discriminate based on content.") == true) {
+        open(r, "_blank");
+    }
+}
+
+function toggle(obj) {
+	var el = document.getElementById(obj);
+	el.style.display = (el.style.display != 'none' ? 'none' : '' );
+	document.getElementById('hamburger').style.visibility = (document.getElementById('hamburger').style.visibility != '' ? '' : 'hidden' );
+}
+
+function addClass(element, classToAdd) {
+    var currentClassValue = element.className;
+      
+    if (currentClassValue.indexOf(classToAdd) == -1) {
+        if ((currentClassValue == null) || (currentClassValue === "")) {
+            element.className = classToAdd;
+        } else {
+            element.className += " " + classToAdd;
+        }
+    }
+}
+ 
+function removeClass(element, classToRemove) {
+    var currentClassValue = element.className;
+ 
+    if (currentClassValue == classToRemove) {
+        element.className = "";
+        return;
+    }
+ 
+    var classValues = currentClassValue.split(" ");
+    var filteredList = [];
+ 
+    for (var i = 0 ; i < classValues.length; i++) {
+        if (classToRemove != classValues[i]) {
+            filteredList.push(classValues[i]);
+        }
+    }
+ 
+    element.className = filteredList.join(" ");
+}
+
+
+function categoryToggle( obj ) {
+    var t = obj;
+
+    var x = document.getElementsByClassName("category");
+    
+    var a = document.getElementsByClassName("media");
+    var b = document.getElementsByClassName("client");
+    var c = document.getElementsByClassName("dev");
+    var d = document.getElementsByClassName("personality");
+    var e = document.getElementsByClassName("astrology");
+
+    var i;
+
+    if ( t == 'media') {
+		  for (i = 0; i < x.length; i++) {
+		    x[i].parentElement.style.display = 'none';
+		    x[i].style.color = 'initial';
+		  }
+		  for (i = 0; i < a.length; i++) {
+		    a[i].parentElement.style.display = 'list-item';
+		    a[i].style.color = 'magenta';
+		  }
+	  } else if ( t == 'client') {
+		  for (i = 0; i < x.length; i++) {
+		    x[i].parentElement.style.display = 'none';
+		    x[i].style.color = 'initial';
+		  }
+		  for (i = 0; i < b.length; i++) {
+		    b[i].parentElement.style.display = 'list-item';
+		    b[i].style.color = 'magenta';
+		  }
+	 	} else if ( t == 'dev') {
+		  for (i = 0; i < x.length; i++) {
+		    x[i].parentElement.style.display = 'none';
+		    x[i].style.color = 'initial';
+		  }
+		  for (i = 0; i < c.length; i++) {
+		    c[i].parentElement.style.display = 'list-item';
+		    c[i].style.color = 'magenta';
+		  }
+	 	} else if ( t == 'personality') {
+		  for (i = 0; i < x.length; i++) {
+		    x[i].parentElement.style.display = 'none';
+		    x[i].style.color = 'initial';
+		  }
+		  for (i = 0; i < d.length; i++) {
+		    d[i].parentElement.style.display = 'list-item';
+		    d[i].style.color = 'magenta';
+		  }
+	 	} else if ( t == 'astrology') {
+		  for (i = 0; i < x.length; i++) {
+		    x[i].parentElement.style.display = 'none';
+		    x[i].style.color = 'initial';
+		  }
+		  for (i = 0; i < e.length; i++) {
+		    e[i].parentElement.style.display = 'list-item';
+		    e[i].style.color = 'magenta';
+		  }
+	  }else{
+		  for (i = 0; i < x.length; i++) {
+		    x[i].parentElement.style.display = 'list-item';
+		    x[i].style.color = 'initial';
+		  }
+	  }
+
+	//http://stackoverflow.com/questions/8624939/performance-of-if-else-switch-or-map-based-conditioning
+	//http://stackoverflow.com/questions/2922948/javascript-switch-vs-if-else-if-else
+	//http://www.w3schools.com/js/js_switch.asp
+
+
+	//http://www.w3schools.com/jsref/met_document_getelementsbyclassname.asp
+	//http://www.w3schools.com/jsref/prop_node_parentelement.asp
+
+	//document.getElementById('li').style.visibility = 'hidden';
+ 	//document.getElementById('category').style.visibility = 'visible';
+ 	//document.getElementsByClassName('category').style.visibility = (document.getElementsByClassName('category').style.visibility != '' ? '' : 'hidden' );
+
+}
+
+
+// {% capture posts %}
+// 	[
+// 		{% for post in site.posts %}
+// 			{
+// 				"title"    : "{{ post.title }}",
+// 				"url"      : "{{ post.url }}",
+// 				"date"     : "{{ post.date | date: "%B %d, %Y" }}",
+// 				"content"  : "{{ post.content | escape }}"
+// 			}
+// 			{% if forloop.last %}{% else %},{% endif %}
+// 		{% endfor %}
+// 	]
+// {% endcapture %}
+// var posts = {{posts | strip_newlines}}
+
+
+// {% capture catArray %}
+// [
+// 	{% for category in site.categories %}
+// 		"{{ category | first }}",
+// 		{% if forloop.last %}{% else %},{% endif %}
+// 	{% endfor %}
+// ]
+// {% endcapture %}
+
+// var catArray = [{{ catArray }}]
+var catArray = [{% for category in site.categories %} "{{ category | first }}" {% if forloop.last %}{% else %},{% endif %} {% endfor %}]
+
+
+function addClassHide( obj ){
+	var lessCatArray = obj;
+	var t;
+	for (t=0; lessCatArray.length; t++){
+		var x = document.querySelectorAll("."+lessCatArray);
+		var i;
+		for (i = 0; i < x.length; i++) {
+			x[i].parentElement.className = 'hide';
+		}
+	}
+}
+
+function addClassHide( obj ){
+	var lessCatArray = obj;
+	var x = document.querySelectorAll("."+lessCatArray);
+	var i;
+	var j;
+	for (i=0; lessCatArray.length; i++){
+		for (j = 0; j < x.length; i++) {
+			x[i].parentElement.className = 'hide';
+		}
+	}
+}
+
+function removeClassHide(){
+	var x = document.querySelectorAll(".hide");
+	var i;
+	for (i = 0; i < x.length; i++) {
+		x[i].removeAttribute("class");
+	}
+}
+
+function caTog( obj ){
+	var t = obj;
+
+	var catArray = [{% for category in site.categories %} "{{ category | first }}" {% if forloop.last %}{% else %},{% endif %} {% endfor %}]
+
+	if ( catArray.indexOf(t) > -1 ){
+		var Ti = catArray.indexOf(t);
+		catArray.splice(Ti, 1);
+		return catArray;
+		//addClassHide(catArray);
+	} else {
+		removeClassHide();
+	}
+	
+	
+	// var x = document.querySelectorAll(".category");
+	// var i;
+	// for (i = 0; i < x.length; i++) {
+	// 	//if sibling class = t 
+	// }
+}
+
+
+
+
+
+
