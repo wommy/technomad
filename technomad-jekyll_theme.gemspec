@@ -1,18 +1,18 @@
 # coding: utf-8
 
-Gem::Specification.new do |spec|
-  spec.name          = "technomad-jekyll_theme"
-  spec.version       = "0.1.0"
-  spec.authors       = ["Tommy Williams"]
-  spec.email         = ["tom@technomad.media"]
+Gem::Specification.new do |s|
+  s.name          = "technomad-jekyll_theme"
+  s.version       = "0.1.4"
+  s.authors       = ["Tommy Williams"]
+  s.email         = ["tom@technomad.media"]
 
-  spec.summary       = "technomad, a jekyll theme built by wommy"
-  spec.homepage      = "https://github.com/wommy/technomad-jekyll_theme"
-  spec.license       = "Apache-2.0"
+  s.summary       = "technomad, a jekyll theme built by wommy"
+  s.homepage      = "https://github.com/wommy/technomad-jekyll_theme"
+  s.license       = "Apache-2.0"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(_layouts|_includes|_sass|LICENSE|README)/i}) }
+  s.files = `git ls-files -z`.split("\x0").grep(%r{^(_sass|_includes|_layouts|LICENSE|README)/})
 
-  spec.add_development_dependency "jekyll", "~> 3.2"
-  spec.add_development_dependency "bundler", "~> 1.12"
-  spec.add_development_dependency "rake", "~> 10.0"
+  s.add_development_dependency "jekyll", "~> 3.2"
+  s.add_development_dependency "bundler", "~> 1.12"
+  s.add_development_dependency "rake", "~> 10.0"
 end
