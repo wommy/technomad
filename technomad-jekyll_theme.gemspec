@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name          = "technomad-jekyll_theme"
-  s.version       = "0.1.4"
+  s.version       = "0.1.6"
   s.authors       = ["Tommy Williams"]
   s.email         = ["tom@technomad.media"]
 
