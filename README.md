@@ -4,22 +4,29 @@ build by [wommy](https://github.com/wommy)
 
 ## Installation
 
-    $ gem install technomad-jekyll_theme
+```
+$ gem install technomad-jekyll_theme
+```
 
 ```ruby
-Gemfile
----
+-- Gemfile --
 gem "technomad-jekyll_theme"
 ```
 
 ```yaml
-_config.yml
----
+-- _config.yml --
 theme: technomad-jekyll_theme
 ```
 
-    $ bundle install
-    $ bundle exec jekyll serve
+```scss
+-- css/main.scss --
+@import "{{ site.theme }}";
+```
+
+```
+$ bundle install
+$ bundle exec jekyll serve
+```
 
 ## License
 
