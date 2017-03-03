@@ -1,0 +1,25 @@
+{
+  "name": "c9_npmbp-technomad",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "html": "pug ./*.pug -o _app/ -P -w -s",
+    "css": "node-sass __*.scss -o _app/",
+    "css:w": "node-sass -w __*.scss -o _app/",
+    "serve": "browser-sync start -s '_app' -f '_app' --port $PORT --host $IP",
+    "dev": "parallelshell 'npm run html' 'npm run css' 'npm run css:w' 'npm run serve'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wommy/c9_npmbp-technomad.git"
+  },
+  "keywords": [ "cloud9","npm","boilerplate","wommy","technomad",
+    "node","jade","pug","pug-cli","node-sass","browser-sync","parallelshell","netlify-cli"],
+  "author": "wommy <tom@technomad.media> (wommy.io)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/wommy/c9_npmbp-technomad/issues"
+  },
+  "homepage": "https://github.com/wommy/c9_npmbp-technomad#readme"
+}
