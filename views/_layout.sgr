@@ -7,16 +7,11 @@ html
       meta(name='description' content='')
       meta(name='author' content='wommy')
       meta(name='viewport' content='width=device-width, initial-scale=1')
-
-    block(name='title')
       title Title of Your Site
-
-    block(name='stylesheets')
       link(rel='stylesheet' href='css/index.css')
 
   body
-    main(role='main' id='{{ pageId }}')
+    main(role='main')
       block(name='content')
 
-    block(name='javascript')
-      script(src='js/main.js' defer)
+    script(src='js/main.js' defer)

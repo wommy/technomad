@@ -1,4 +1,4 @@
-extends(src='layout.sgr')
+extends(src='_layout.sgr')
   block(name='content')
     h2 Hello World!
     p Thanks for using <a href='https://github.com/static-dev/spike'>spike</a>
