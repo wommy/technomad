@@ -8,6 +8,7 @@
   },
   "bugs": "https://github.com/wommy/technomad/issues",
   "dependencies": {
+    "buttercms": "^1.0.15",
     "reshape-standard": "^1.0.0",
     "spike-css-standards": "^1.0.0",
     "spike-js-standards": "^2.0.1",
