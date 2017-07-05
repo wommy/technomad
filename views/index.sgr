@@ -2,4 +2,5 @@ extends(src='_layout.sgr')
   block(name='content')
     h2 notice:
     li(mdi) had2 prepend `css & js` with `'/'` in layout.sgr
-    li(mdi) post sub-template `extends` *works* yet borks terminal output
+    li(mdi) have to mv public/blog.html >> public/blog/index.html
+    li(mdi) cant `include` _nav.sgr
