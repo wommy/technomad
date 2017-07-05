@@ -1,0 +1,7 @@
+nav
+  hr
+  span nav:
+  a(href='/') home
+  span -
+  a(href='/blog') blog
+  hr

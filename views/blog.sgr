@@ -1,4 +1,4 @@
-extends(src='layout.sgr')
+extends(src='_layout.sgr')
   block(name='content')
     each(loop='post in dato.post')
       p

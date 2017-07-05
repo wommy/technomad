@@ -23,7 +23,7 @@ module.exports = {
       models: [{
         name: 'post',
         template: {
-          path: 'views/post.sgr',
+          path: 'views/_post.sgr',
           output: (post) => { return `blog/${post.title}.html` }
         }
       }]
