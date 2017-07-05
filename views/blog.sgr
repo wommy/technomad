@@ -1,0 +1,6 @@
+extends(src='layout.sgr')
+  block(name='content')
+    each(loop='post in dato.post')
+      p
+        a(href='/blog/{{post.title}}' style='display:block;') {{post.title}}
+    // p {{{ JSON.stringify(dato) }}}
