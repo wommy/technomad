@@ -1,0 +1,4 @@
+extends(src='./views/_layout.sgr')
+  block(name='content')
+    h3 {{ item.title }}
+    p {{ item.content }}

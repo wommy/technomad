@@ -16,12 +16,18 @@ html
     main(role='main' id='{{ pageId }}')
       nav
         hr
-        span nav:
-        a(href='/') home
-        span -
-        a(href='/blog') blog
+        span nav
+        each(loop='page in dato.page')
+          span  -
+          if(condition="page.order > 0 ")
+            a(href='/{{page.title}}') {{page.title}}
+          else
+            a(href='/') home
         hr
+      include(src='./views/_nav.sgr')
       block(name='content')
+        h3 {{ item.title }}
+        p {{ item.content }}
 
     block(name='javascript')
       script(src='/js/main.js' defer)

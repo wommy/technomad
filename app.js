@@ -26,6 +26,12 @@ module.exports = {
           path: 'views/_post.sgr',
           output: (post) => { return `blog/${post.title}.html` }
         }
+      },{
+        name: 'page',
+        template: {
+          path: 'views/_page.sgr',
+          output: (page) => { return `/${page.title}.html` }
+        }
       }]
     })
   ]
