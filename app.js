@@ -10,7 +10,7 @@ module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
   ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
-  reshape: htmlStandards({ locals }),
+  reshape: htmlStandards({ root: './views', locals }),
   postcss: cssStandards({
     minify: env === 'production',
     warnForDuplicates: env !== 'production'

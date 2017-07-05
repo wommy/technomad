@@ -2,6 +2,12 @@ nav
   hr
   span nav:
   a(href='/') home
-  span -
+  span  -
   a(href='/blog') blog
+  span  -
+  a(href='/about') about
+  span  -
+  a(href='/contact') contact
+  span  -
+  a(href='/test') test
   hr

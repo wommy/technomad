@@ -1,3 +1,4 @@
 extends(src='_layout.sgr')
   block(name='content')
     h2 hello world
+    p {{{ JSON.stringify(dato) }}}
