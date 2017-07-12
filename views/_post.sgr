@@ -1,4 +1,4 @@
 extends(src='_layout.sgr')
   block(name='content')
     h3 {{ item.title }}
-    div(md) {{ item.content }}
+    p {{ item.content }}
