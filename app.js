@@ -4,7 +4,6 @@ const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
 const env = process.env.NODE_ENV
 const SpikeDatoCMS = require('spike-datocms')
-const DATO_TOKEN = process.env.DATO_API_TOKEN || 'b81ff04ff31e21752395'
 const locals = { foo: 'bar' }
 
 module.exports = {
@@ -25,7 +24,7 @@ module.exports = {
   plugins: [
     new SpikeDatoCMS({
       addDataTo: locals,
-      token: DATO_TOKEN,
+      token: process.env.DATO_API_TOKEN || 'b81ff04ff31e21752395',
       models: [{
         name: 'post',
         template: {
