@@ -2,15 +2,21 @@ const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
-const env = process.env
+const env = process.env.NODE_ENV
 const SpikeDatoCMS = require('spike-datocms')
-const locals = { }
+const DATO_API_TOKEN = ( env === 'production' ? process.env :'b81ff04ff31e21752395')
+const locals = { foo: 'bar' }
 
 module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
-  ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
-  reshape: htmlStandards({ root: './views', locals }),
+  ignore: ['**/_*', '**/.*', 'readme.md', 'yarn.lock'],
+  reshape: htmlStandards({
+    root: './views',
+    locals,
+    // locals: (ctx) => { return { pageId: pageId(ctx) } },
+    minify: env === 'production'
+  }),
   postcss: cssStandards({
     minify: env === 'production',
     warnForDuplicates: env !== 'production'
@@ -19,7 +25,7 @@ module.exports = {
   plugins: [
     new SpikeDatoCMS({
       addDataTo: locals,
-      token: env.DATO_API_TOKEN,
+      token: DATO_API_TOKEN,
       models: [{
         name: 'post',
         template: {

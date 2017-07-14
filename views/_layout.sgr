@@ -1,23 +1,24 @@
 doctype html
 html
   head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    meta(name='description' content='')
-    meta(name='author' content='')
-    meta(name='viewport' content='width=device-width, initial-scale=1')
+    block(name='meta')
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge')
+      meta(name='description' content='')
+      meta(name='author' content='')
+      meta(name='viewport' content='width=device-width, initial-scale=1')
 
     block(name='title')
       title Title of Your Site
 
-    link(rel='stylesheet' href='/css/index.css')
+    block(name='stylesheets')
+      link(rel='stylesheet' href='/css/index.css')
 
   body
     main(role='main' id='{{ pageId }}')
       include(src='_nav.sgr')
       block(name='content')
-        h3 {{ item.title }}
-        p {{ item.content }}
+        h2 here b no thang
 
     block(name='javascript')
       script(src='/js/main.js' defer)
