@@ -4,7 +4,7 @@ const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
 const env = process.env.NODE_ENV
 const SpikeDatoCMS = require('spike-datocms')
-const DATO_API_TOKEN = ( env === 'production' ? process.env :'b81ff04ff31e21752395')
+const DATO_API_TOKEN = ( env === 'production' ? process.env.DATO_API_TOKEN :'b81ff04ff31e21752395')
 const locals = { foo: 'bar' }
 
 module.exports = {
