@@ -5,6 +5,7 @@ const pageId = require('spike-page-id')
 const env = process.env.NODE_ENV
 const SpikeDatoCMS = require('spike-datocms')
 const locals = { foo: 'bar' }
+const netlify = process.env.DATO_API_TOKEN
 
 module.exports = {
   devtool: 'source-map',
@@ -24,7 +25,7 @@ module.exports = {
   plugins: [
     new SpikeDatoCMS({
       addDataTo: locals,
-      token: process.env.DATO_API_TOKEN || 'b81ff04ff31e21752395',
+      token: netlify || 'b81ff04ff31e21752395',
       models: [{
         name: 'post',
         template: {
