@@ -8,6 +8,6 @@ nav
   a(href='/about') about
   span  -
   a(href='/contact') contact
-  span  -
-  a(href='/test') test
+  // span  -
+  // a(href='/test') test
   hr
