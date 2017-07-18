@@ -1,15 +1,15 @@
 {
-  "name": "",
+  "name": "dato",
   "description": "",
   "version": "0.0.1",
-  "author": "",
+  "author": "wommy <tom@technomad.media>",
   "ava": {
     "verbose": "true"
   },
   "bugs": "https://github.com///issues",
   "dependencies": {
     "reshape-standard": "^2.0.0",
-    "spike": "^2.0.0",
+    "spike": "^2.0.2",
     "spike-css-standards": "^2.0.1",
     "spike-datocms": "^1.0.0",
     "spike-js-standards": "^2.0.2",
@@ -33,5 +33,6 @@
     "start": "spike watch",
     "build": "spike compile",
     "prod": "NODE_ENV=production spike compile -e production"
-  }
+  },
+  "license": "MIT"
 }
