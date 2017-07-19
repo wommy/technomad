@@ -4,17 +4,17 @@
 
 ## Installation & Setup
 
-follow these four steps and create a free blogging website using [github](//github.com), [spike](//spike.cf), [datocms](//datocms.com), and [netlify](//netlify.com)
+follow these four steps and create a free blogging website leveraging the technologies of [github](//github.com), [spike](//spike.cf), [netlify](//netlify.com), and [datocms](//datocms.com)
 
-1. ### create and initalize (3) accounts
+1. ### create and initialize accounts
     1. [github.com](//github.com)
         1. create new account
         1. fork [technomad_spike_datocms](//www.github.com/wommy/technomad_spike_datocms)
     1. [netlify.com](//netlify.com)
         1. login using github account
-        1. create new site from `wommy/technomad_spike_datocms` repo
-            1. `build command: spike clean && spike compile`
-            1. `output directory: public`
+        1. create new site from forked `wommy/technomad_spike_datocms` repo
+            1. build command: `spike clean && spike compile`
+            1. output directory: `public`
     1. [datoCMS.com](//www.datocms.com)
         1. create account
         1. create first site
@@ -38,7 +38,7 @@ follow these four steps and create a free blogging website using [github](//gith
     1. create (2) models
         1. `model: page` <= needs to be exact
         1. `model: post` <= needs to be exact
-    1. give `each` model (2) fields:
+    1. give `each` model, both `page` and `post`, (2) fields:
         1. `model: post`
             1. `text` => `single line entry`
                 1. `field: title` <= needs to be exact

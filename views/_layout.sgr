@@ -19,6 +19,12 @@ html
       include(src='_nav.sgr')
       block(name='content')
         h2 here b no thang
+      block(name='footer')
+        footer(style='text-align:right')
+          p
+            hr
+            span site powered by
+            a(href='https://github.com/wommy/technomad_spike_datocms') technomad
 
     block(name='javascript')
       script(src='/js/main.js' defer)
