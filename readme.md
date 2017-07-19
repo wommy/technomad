@@ -4,6 +4,8 @@
 
 ## Installation & Setup
 
+follow these four steps and create a free blogging website using [github](//github.com), [spike](//spike.cf), and [datocms](//datocms.com)
+
 1. ### create and initalize (3) accounts
     1. [github.com](//github.com)
         1. create new account
