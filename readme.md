@@ -2,72 +2,65 @@
 
 
 
-## Setup
+## Installation
 
-note:
-`$` denotes a variable that differs for every individual, ex: `$site` is the site name of your choice,
-ie: whenever you see a `$` you can use whatever you want
+### 1 create and initalize (3) accounts
+  1. [github.com](github.com)
+    1. create new account
+    1. fork [technomad_spike_datocms](www.github.com/wommy/technomad_spike_datocms)
+  1. [netlify.com](netlify.com)
+    1. create account using github account
+    1. create new site from `wommy/technomad_spike_datocms` repo
+      1. build command: `spike clean && spike compile`
+      1. output directory: `public`
+  1. [datoCMS.com](datoCMS.com)
+    1. create account
+    1. create first site
+      1. `name:` whatever you want
+          1. `static site generator: other`
+          1. `project name:` whatever you want
 
-- create `Github` account <https://github.com/>
-  - fork [technomad_spike_datocms](https://github.com/wommy/technomad_spike_datocms) (top right corner)
-- create `Netlify` account <https://app.netlify.com/signup>; `Github`; `Authorize Netlify`
-  - `New site from Git`; `Continuous Deployment`: `Github`; `Authorize Netlify`; `technomad_spike_datocms`
-    - build command: `spike clean && spike compile`
-    - publish direction: `public`
-    - `deploy site`
-- create `datoCMS` account <https://www.datocms.com/>
-  - `create first site`:
-    - static site generator: `other`
-    - project name: `$name` <= whatever name you want here
-- link `datoCMS & netlify`
-  - copy paste `datoCMS` `API token` to `netlify`
-    - `datoCMS/Settings/API tokens/Read-only API token` <= copy this
-    - `Netlify/$site`
-      - `build environment variables`: `edit variables` ( scroll down )
-        - key: `dato`
-        - value: `'$Read-only API token'` <= paste here
-        - `save`
-  - create build hook
-    - `datoCMS/Settings/Deployment_Settings/Production`
-      - `Netlify`
-      - `authorize`
-      - select `$site`
-      - `save settings`
-- create `DatoCMS`: `models` and `fields`
-  - `DatoCMS/Settings/Models`
-    - `add new model` (+ button bottom middle): name: `page`; `save model`
-      - `add field` (right middle of page) - `text` - `single line string`
-        - Name*: `title`
-        - validations: required, unique field
-        - `save field`
-      - `add field` (right top middle) - `text` - `multiple paragraph text`
-        - Name*: `content`
-        - validations: required
-        - `save field`
-    - `add another model`: name: `post`; `save model`
-      - `add field`: `text`; `single line string`
-        - name*: `title`
-        - validations: required, unique field
-        - `save field`
-      - `add field`: `text`; `multiple-paragraph text`
-        - name* `content`
-        - validations: required
-        - `save field`
-- add content to `datoCMS`
-  - `content tab` ( bottom right )
-    - `pages`
-      - `add page`
-        - title: `about`
-        - content: `$edit me aboots` <= whatever you want goes here
-        - `save record`
-    - `pages`
-      - `add page`
-        - title: `contact`
-        - content: `$contact page herr`  <= whatever you want goes here
-        - `save record`
-    - `posts`
-      - `add post`
-        - title: `my-first-blog-post` <= `-`s and `_` instead of ` ` (spaces)
-        - content: `it works!`  <= whatever you want goes here
-        - `save record`
-- `publish changes` ( top right corner )
+### 2 link datoCMS & netlify
+  1. api token
+    1. netlify `edit` build environment variables
+      1. `key: dato`
+      1. `value:` paste from `datoCMS / API tokens / Read-only API token`
+  1. build hook
+    1. datocms / deployment settings / production
+      1. netlify
+      1. authorize
+      1. select site
+      1. save settings
+
+### 3 create dato models & fields
+  1. create (2) models
+    1. `model: page` <= needs to be exact
+    1. `model: post` <= needs to be exact
+  1. give `each` model (2) fields:
+    1. `model: post`
+      1. `text` => `single line entry`
+          1. `field: title` <= needs to be exact
+          1. `validations` == `required`, `unique field`
+      1. `text` => `multiple paragraph text`
+          1. `field: content` <= needs to be exact
+          1. `validations` == `required`
+    1. `model: page`
+      1. `text` => `single line entry`
+          1. `field: title` <= needs to be exact
+          1. `validations` => `required`, `unique field`
+      1. `text` => `multiple paragraph text`
+          1. `field: content` <= needs to be exact
+          1. `validations` => `required`
+
+### 4 populate & publish
+  1. populate (2)`page`s & (1)`post`
+    1. `page:`
+      1. `title: about` <= needs to be exact
+      1. `content:` whatever you want on your 'about' page
+    1. `page:`
+      1. `title: contact` <= needs to be exact
+      1. `content: `whatever you want on your 'contact' page
+    1. `post:`
+      1. `title:` whatever you want as the title of your first blog post, use `-` or `_` instead of spaces
+      1. `content:` whatever you want as your first blog post content
+  1. publish content

@@ -1,29 +1,115 @@
 extends(src='_layout.sgr')
   block(name='content')
-    h2 Hello World!
-    p(retext-skip) Thanks for using <a href='https://github.com/static-dev/spike'>spike</a>
-    p Example of locals: {{ foo }}
-    p(mdi) Example of **markdown**
-    p Example of "smart quotes" -- and dashes
+    div(style='display:none;')
+      h2 Hello World!
+      p(retext-skip) Thanks for using <a href='https://github.com/static-dev/spike'>spike</a>
+      p Example of locals: {{ foo }}
+      p(mdi) Example of **markdown**
+      p Example of "smart quotes" -- and dashes
 
-    hr
+      hr
 
-    h3 Getting Started
-    h4 The Stack:
-    ul
-      li
-        a(href="http://github.com/reshape/reshape") reshape
-        |  for HTML transforms
-      li
-        a(href="https://babeljs.io/") babel
-        |  for JS transforms
-      li
-        a(href="http://postcss.org/") postcss
-        |  for CSS transforms
-      li
-        a(href="http://webpack.github.io") webpack
-        |  for JS bundling
+      h3 Getting Started
+      h4 The Stack:
+      ul
+        li
+          a(href="http://github.com/reshape/reshape") reshape
+          |  for HTML transforms
+        li
+          a(href="https://babeljs.io/") babel
+          |  for JS transforms
+        li
+          a(href="http://postcss.org/") postcss
+          |  for CSS transforms
+        li
+          a(href="http://webpack.github.io") webpack
+          |  for JS bundling
 
-    p Customize your settings by editing the
-      a(href="https://spike.readme.io/docs/appjs") app.js
-      |  file or simply start by editing this view
+      p Customize your settings by editing the
+        a(href="https://spike.readme.io/docs/appjs") app.js
+        |  file or simply start by editing this view
+    div
+      h2 Installation
+      h3 1 create and initalize (3) accounts
+      ol
+        li(mdi) [github.com](github.com)
+        ol
+          li create new account
+          li(mdi) fork [technomad_spike_datocms](www.github.com/wommy/technomad_spike_datocms)
+        li(mdi) [netlify.com](netlify.com)
+        ol
+          li create account using github account
+          li(mdi) create new site from `wommy/technomad_spike_datocms` repo
+          ol
+            li(mdi) build command: `spike clean && spike compile`
+            li(mdi) output directory: `public`
+        li(mdi) [datoCMS.com](datoCMS.com)
+        ol
+          li create account
+          li create first site
+          ol
+            li(mdi) `name:` whatever you want
+            ol
+              li(mdi) `static site generator: other`
+              li(mdi) `project name:` whatever you want
+      h3 2 link datoCMS & netlify
+      ol
+        li api token
+        ol
+          li(mdi) netlify `edit` build environment variables
+          ol
+            li(mdi) `key: dato`
+            li(mdi) `value:` paste from `datoCMS / API tokens / Read-only API token`
+        li build hook
+        ol
+          li datocms / deployment settings / production
+          ol
+            li netlify
+            li authorize
+            li select site
+            li save settings
+      h3 3 create dato models & fields
+      ol
+        li create (2) models
+        ol
+          li(mdi) `model: page` <= needs to be exact
+          li(mdi) `model: post` <= needs to be exact
+        li(mdi) give `each` model (2) fields:
+        ol
+          li(mdi) `model: post`
+          ol
+            li(mdi) `text` => `single line entry`
+            ol
+              li(mdi) `field: title` <= needs to be exact
+              li(mdi) `validations` == `required`, `unique field`
+            li(mdi) `text` => `multiple paragraph text`
+            ol
+              li(mdi) `field: content` <= needs to be exact
+              li(mdi) `validations` == `required`
+          li(mdi) `model: page`
+          ol
+            li(mdi) `text` => `single line entry`
+            ol
+              li(mdi) `field: title` <= needs to be exact
+              li(mdi) `validations` => `required`, `unique field`
+            li(mdi) `text` => `multiple paragraph text`
+            ol
+              li(mdi) `field: content` <= needs to be exact
+              li(mdi) `validations` => `required`
+      h3 4 populate & publish
+      ol
+        li(mdi) populate (2)`page`s & (1)`post`
+        ol
+          li(mdi) `page:`
+          ol
+            li(mdi) `title: about` <= needs to be exact
+            li(mdi) `content:` whatever you want on your 'about' page
+          li(mdi) `page:`
+          ol
+            li(mdi) `title: contact` <= needs to be exact
+            li(mdi) `content: `whatever you want on your 'contact' page
+          li(mdi) `post:`
+          ol
+            li(mdi) `title:` whatever you want as the title of your first blog post, use `-` or `_` instead of spaces
+            li(mdi) `content:` whatever you want as your first blog post content
+        li publish content
