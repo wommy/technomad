@@ -11,8 +11,8 @@
     1. [netlify.com](netlify.com)
         1. create account using github account
         1. create new site from `wommy/technomad_spike_datocms` repo
-            1. build command: `spike clean && spike compile`
-              1. output directory: `public`
+            1. `build command: spike clean && spike compile`
+            1. `output directory: public`
     1. [datoCMS.com](datoCMS.com)
         1. create account
         1. create first site
