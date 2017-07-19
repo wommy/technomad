@@ -5,7 +5,7 @@
 ## Installation & Setup
 
 1. ### create and initalize (3) accounts
-    1. [github.com](github.com)
+    1. [github.com](//github.com)
         1. create new account
         1. fork [technomad_spike_datocms](//www.github.com/wommy/technomad_spike_datocms)
     1. [netlify.com](//netlify.com)
