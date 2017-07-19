@@ -25,7 +25,7 @@ module.exports = {
   plugins: [
     new SpikeDatoCMS({
       addDataTo: locals,
-      token: TOKEN_netlify.dato || 'b81ff04ff31e21752395',
+      token: TOKEN_netlify.dato,
       models: [{
         name: 'post',
         template: {
