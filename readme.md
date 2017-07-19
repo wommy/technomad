@@ -13,7 +13,7 @@
         1. create new site from `wommy/technomad_spike_datocms` repo
             1. `build command: spike clean && spike compile`
             1. `output directory: public`
-    1. [datoCMS.com](http://datoCMS.com)
+    1. [datoCMS.com](https://www.datocms.com)
         1. create account
         1. create first site
             1. `name:` whatever you want
