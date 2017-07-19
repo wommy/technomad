@@ -15,7 +15,6 @@
         1. fork [technomad_spike_datocms](www.github.com/wommy/technomad_spike_datocms)
     1. [netlify.com](netlify.com)
         1. login using github account
->>>>>>> e2698ee43d3654f0e9978e837ff4be61bfbe4548
         1. create new site from `wommy/technomad_spike_datocms` repo
             1. `build command: spike clean && spike compile`
             1. `output directory: public`
