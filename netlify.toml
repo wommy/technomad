@@ -1,3 +1,6 @@
 [build]
   publish = "public"
   command = "spike clean && spike compile"
+
+[template]
+  incoming-hooks = ["DatoCMS"]
