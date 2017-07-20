@@ -8,9 +8,18 @@ feel free to follow these steps and create a free blogging website leveraging th
 
 first i will provide a brief overview of the steps i make to public a website:
 
-  1. create a new site on DatoCMS and give it pages and posts
-  1. use Netlify to create a new site from my Technomad Github repo
-  1. link DatoCMS and Netlify with Tokens and Hooks
+  1. DatoCMS
+      1. create a new site
+      1. create a Page model
+          1. create an About Page
+          1. create a Contact Page
+      1. create a Post model
+          1. create a Blog post
+  1. Netlify
+      1. create a new site from my Technomad Github repo
+      1. link to DatoCMS
+          1. Tokens
+          1. Hooks
   1. publish from DatoCMS
 
 i want this to be available to anyone of any skill level, so i took the time to type out a beginning-to-end walkthrough.
