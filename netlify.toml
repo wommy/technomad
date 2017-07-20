@@ -6,4 +6,4 @@
   incoming-hooks = ["DatoCMS"]
 
 [template.environment]
-  dato = 'copy your datocms read-only api token here'
+  dato = 'paste your datocms read-only api token here'
