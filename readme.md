@@ -6,6 +6,8 @@
 
 follow these four steps and create a free blogging website leveraging the technologies of [github](//github.com), [spike](//spike.cf), [netlify](//netlify.com), and [datocms](//datocms.com)
 
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wommy/technomad_spike_datocms)
+
 1. ### create and initialize accounts
     1. [github.com](//github.com)
         1. create new account
