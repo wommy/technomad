@@ -6,4 +6,4 @@
   incoming-hooks = ["DatoCMS"]
 
 [template.environment]
-  SECRET_TOKEN = "change me for your secret token"
+  dato = '2db6d82e4eaa85d6adf4'
