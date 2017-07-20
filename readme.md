@@ -14,7 +14,7 @@ follow these four steps and create a free blogging website leveraging the techno
                 1. `static site generator: other`
                 1. `project name:` whatever you want
         1. in the left column, click on API tokens, and click the copy the read-only api token
-    1. click this button [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wommy/technomad_spike_datocms)
+    1. click this [Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/wommy/technomad_spike_datocms) link
         1. paste that token in at the prompt
 
 1. ### create dato models & fields
