@@ -1,0 +1,4 @@
+extends(src='_layout.sgr')
+  block(name='content')
+    h2 technomad.media - website list
+    a(href='wommy.io') wommy.io

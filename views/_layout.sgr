@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+  head
+    block(name='meta')
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge')
+      meta(name='viewport' content='width=device-width, initial-scale=1')
+      meta(name='author' content='wommy')
+      meta(name='description' content='')
+
+    block(name='title')
+      title technomad
+
+    link(rel='stylesheet' href='css/index.css')
+
+  body
+    main(role='main' id='{{ pageId }}')
+      block(name='content')
+
+    block(name='javascript')
+      script(src='js/main.js' defer)
