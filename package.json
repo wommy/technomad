@@ -32,8 +32,8 @@
     "precommit": "npm run lint -s",
     "pretest": "npm run lint -s",
     "test": "NODE_ENV=test ava",
-    "start": "spike watch",
-    "build": "spike compile",
-    "prod": "NODE_ENV=production spike compile -e production"
+    "start": "spike clean && spike watch",
+    "build": "spike clean && spike compile",
+    "prod": "spike clean && NODE_ENV=production spike compile -e production"
   }
 }

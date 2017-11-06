@@ -1,4 +1,12 @@
 extends(src='_layout.sgr')
   block(name='content')
-    h2 technomad.media - website list
-    a(href='wommy.io') wommy.io
+    h1 technomad.media
+    div
+      h2 about / what is this?
+      p i hate writing these things.
+      p technomad.media is where you can see all the websites wommy made.
+      p this site will keep a few details about each website in an effort to standardize and expedite their creation.
+      p primarily this is a tool for wommy, but also functions as a portfolio
+    div
+      h2 website list
+      a(href='//wommy.io') wommy.io
