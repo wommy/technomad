@@ -1,20 +1,42 @@
-extends(src='_layout.sgr')
-  block(name='content')
-    h1 technomad.media
-    div
-      h2 website list
-      a(href='//wommy.io') wommy.io
-    div
-      h2 about / what is this?
-      p i hate writing these things.
-      p technomad.media is where you can see all the websites i, wommy, made.
-      p this site will keep a few details about each website in an effort to standardize and expedite their creation.
-      p now, this is primarily a personal tool, but in time it will grow into a portfolio
-    div
-      h2 how i made this
-      p there isnt a specific 1 2 3, so its easier to list the technologies and how they work with each other.
-      p when i want to build a new website i go to github and create a new repo
-      p i then clone that repo and build a new site with spike
-      p when i publish those changes, i then configure netlify to build
-      p components for github, spike, netlify
-      p my acer r11 chromebook via crouton runs 16.04; i use i3wm and atom
+doctype html
+html(lang='en')
+  head
+    block(name='meta')
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge')
+      meta(name='viewport' content='width=device-width, initial-scale=1')
+      meta(name='author' content='wommy')
+      meta(name='description' content='')
+
+    block(name='title')
+      title technomad
+
+    link(rel='stylesheet' href='css/index.css')
+
+  body
+    main(role='main' id='{{ pageId }}')
+      header
+        h1 technomad.media
+      aside
+        h2 site list
+        a(href='//wommy.io') wommy.io
+      .feed
+        div
+          h2 about / what is this?
+          p i hate writing these things.
+          p technomad.media is where you can see all the websites i, wommy, made.
+          p this site will keep a few details about each website in an effort to standardize and expedite their creation.
+          p now, this is primarily a personal tool, but in time it will grow into a portfolio
+        div
+          h2 how i made this
+          p there isnt a specific 1 2 3, so its easier to list the technologies and how they work with each other.
+          p when i want to build a new website i go to github and create a new repo
+          p i then clone that repo and build a new site with spike
+          p when i publish those changes, i then configure netlify to build
+          p components for github, spike, netlify
+          p my acer r11 chromebook via crouton runs 16.04; i use i3wm and atom
+        div
+          h2 what websites are
+
+    block(name='javascript')
+      script(src='js/main.js' defer)
