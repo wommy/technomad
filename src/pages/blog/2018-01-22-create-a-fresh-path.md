@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 path: /createafreshpath
-title: create a fresh path
+title: Create a Fresh Path
 date: 2018-01-22T22:16:46.931Z
 description: cycling video
 ---
