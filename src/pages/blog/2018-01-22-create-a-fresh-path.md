@@ -1,11 +1,13 @@
 ---
-templateKey: blog-post
+templateKey: 'blog-post'
 path: /createafreshpath
 title: Create a Fresh Path
 date: 2018-01-22T22:16:46.931Z
 description: cycling video
+collection: media
+videoSrc: '<iframe src="//player.vimeo.com/video/122390839" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>'
 ---
-<iframe src="https://player.vimeo.com/video/122390839" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<iframe src="//player.vimeo.com/video/122390839" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
 i couldn't have made this video without some help from my friends:
 

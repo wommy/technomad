@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import Content, { HTMLContent } from '../components/Content';
 
 export const BlogPostTemplate = ({
-  content, contentComponent, description, title, helmet,
+  content, contentComponent, description, title, helmet, collection
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -33,6 +33,7 @@ export default ({ data }) => {
     description={post.frontmatter.description}
     helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
     title={post.frontmatter.title}
+    collection={post.frontmatter.collection}
   />);
 };
 
@@ -45,6 +46,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        collection
       }
     }
   }
