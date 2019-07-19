@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "manifest"
-date:   2019-07-17 14:41:00 -0400
+title: "manifest"
+date: 2019-07-17 14:41:00 -0400
 categories: update
 ---
 ![what year is it](https://i.kym-cdn.com/entries/icons/original/000/007/784/what-year-is-it-robin-williams.jpg)
