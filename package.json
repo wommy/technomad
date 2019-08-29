@@ -1,0 +1,12 @@
+{
+  "name": "technomad_ejs",
+  "version": "0.0.0",
+  "description": "technomad built with ejs",
+  "main": "index.js",
+  "repository": "git@github.com:wommy/technomad_ejs.git",
+  "author": "wommy <tom@technomad.media>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.1"
+  }
+}
