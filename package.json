@@ -1,0 +1,9 @@
+{
+  "name": "technomad_react",
+  "version": "0.0.0",
+  "description": "technomad build with react",
+  "main": "index.js",
+  "repository": "git@github.com:wommy/technomad_react.git",
+  "author": "wommy <tom@technomad.media>",
+  "license": "MIT"
+}
