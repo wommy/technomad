@@ -1,0 +1,11 @@
+{
+  "name": "technomad_pug",
+  "version": "0.0.0",
+  "description": "technomad build with pug",
+  "main": "index.js",
+  "author": "wommy",
+  "license": "MIT",
+  "devDependencies": {
+    "pug": "^2.0.3"
+  }
+}
