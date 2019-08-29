@@ -1,0 +1,9 @@
+{
+  "name": "technomad_webpack",
+  "version": "0.0.0",
+  "description": "technomad built with webpack",
+  "main": "index.js",
+  "repository": "git@github.com:wommy/technomad_webpack.git",
+  "author": "wommy <tom@technomad.media>",
+  "license": "MIT"
+}
