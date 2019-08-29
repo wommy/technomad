@@ -1,0 +1,11 @@
+{
+  "name": "technomad_ejs_11ty",
+  "version": "0.0.0",
+  "description": "technomad ejs built with 11ty",
+  "main": "index.js",
+  "author": "wommy",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^0.8.3"
+  }
+}
