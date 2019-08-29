@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "express": "^4.16.4",
+    "express-variable": "^2.2.2"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@phtml/doctype": "^2.1.0",
+    "@phtml/include": "^2.0.2",
+    "@phtml/jsx": "^2.1.3",
+    "@phtml/schema": "^2.0.0",
+    "@phtml/self-closing": "^2.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.6.0"
+  }
+}
