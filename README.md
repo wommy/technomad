@@ -7,6 +7,7 @@ hello! this is where i write about the project
 ### done
 - [x] index.html
 - [x] netlify
+- [x] template-ize
 
 ### doing
 - [ ]
